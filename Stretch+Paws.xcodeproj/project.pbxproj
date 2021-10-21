@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA04E90F2720C8B60048B9B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04E90E2720C8B50048B9B1 /* DetailView.swift */; };
+		FAD77732272208A100E73AC6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD77731272208A100E73AC6 /* DetailView.swift */; };
+		FAD7773427220F3200E73AC6 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7773327220F3100E73AC6 /* Pose.swift */; };
 		FAF76EFC271A06B9008B7521 /* Stretch_PawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF76EFB271A06B9008B7521 /* Stretch_PawsApp.swift */; };
 		FAF76EFE271A06B9008B7521 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF76EFD271A06B9008B7521 /* ContentView.swift */; };
 		FAF76F00271A06BA008B7521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF76EFF271A06BA008B7521 /* Assets.xcassets */; };
@@ -15,7 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA04E90E2720C8B50048B9B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FAD77731272208A100E73AC6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FAD7773327220F3100E73AC6 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		FAF76EF8271A06B9008B7521 /* Stretch+Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch+Paws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF76EFB271A06B9008B7521 /* Stretch_PawsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stretch_PawsApp.swift; sourceTree = "<group>"; };
 		FAF76EFD271A06B9008B7521 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +57,8 @@
 			children = (
 				FAF76EFB271A06B9008B7521 /* Stretch_PawsApp.swift */,
 				FAF76EFD271A06B9008B7521 /* ContentView.swift */,
-				FA04E90E2720C8B50048B9B1 /* DetailView.swift */,
+				FAD77731272208A100E73AC6 /* DetailView.swift */,
+				FAD7773327220F3100E73AC6 /* Pose.swift */,
 				FAF76EFF271A06BA008B7521 /* Assets.xcassets */,
 				FAF76F01271A06BA008B7521 /* Preview Content */,
 			);
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD7773427220F3200E73AC6 /* Pose.swift in Sources */,
 				FAF76EFE271A06B9008B7521 /* ContentView.swift in Sources */,
-				FA04E90F2720C8B60048B9B1 /* DetailView.swift in Sources */,
+				FAD77732272208A100E73AC6 /* DetailView.swift in Sources */,
 				FAF76EFC271A06B9008B7521 /* Stretch_PawsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +277,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Stretch+Paws/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -302,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Stretch+Paws/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -2,14 +2,15 @@
 //  DetailView.swift
 //  Stretch+Paws
 //
-//  Created by Louise Bishop on 20/10/2021.
+//  Created by Louise Bishop on 21/10/2021.
 //
 
 import SwiftUI
 
 struct DetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Purrrfect!")
+        .font(.title)
     }
 }
 

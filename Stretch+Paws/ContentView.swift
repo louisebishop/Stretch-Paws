@@ -11,7 +11,10 @@ struct ContentView: View {
     var body: some View {
       NavigationView {
         List {
-          Text("Downward-facing Dog")
+          NavigationLink(destination: DetailView()) {
+            Text("Downward-facing Dog")
+          }
+          
           Text("Standing Forward Fold")
           Text("Tree Pose")
         }.listStyle(.grouped)
