@@ -2,15 +2,21 @@
 //  ContentView.swift
 //  Stretch+Paws
 //
-//  Created by Louise Bishop on 15/10/2021.
+//  Created by Louise Bishop 21/09/2021.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      NavigationView {
+        List {
+          Text("Downward-facing Dog")
+          Text("Standing Forward Fold")
+          Text("Tree Pose")
+        }.listStyle(.grouped)
+      .navigationBarTitle("Stretch + Paws")
+      }
     }
 }
 
