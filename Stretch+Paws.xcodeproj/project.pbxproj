@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAA276A22722BF5900FB4B93 /* YogaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA276A12722BF5900FB4B93 /* YogaTimer.swift */; };
 		FAD77732272208A100E73AC6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD77731272208A100E73AC6 /* DetailView.swift */; };
 		FAD7773427220F3200E73AC6 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7773327220F3100E73AC6 /* Pose.swift */; };
 		FAF76EFC271A06B9008B7521 /* Stretch_PawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF76EFB271A06B9008B7521 /* Stretch_PawsApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAA276A12722BF5900FB4B93 /* YogaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimer.swift; sourceTree = "<group>"; };
 		FAD77731272208A100E73AC6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FAD7773327220F3100E73AC6 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		FAF76EF8271A06B9008B7521 /* Stretch+Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stretch+Paws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 				FAF76EFD271A06B9008B7521 /* ContentView.swift */,
 				FAD77731272208A100E73AC6 /* DetailView.swift */,
 				FAD7773327220F3100E73AC6 /* Pose.swift */,
+				FAA276A12722BF5900FB4B93 /* YogaTimer.swift */,
 				FAF76EFF271A06BA008B7521 /* Assets.xcassets */,
 				FAF76F01271A06BA008B7521 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				FAD7773427220F3200E73AC6 /* Pose.swift in Sources */,
 				FAF76EFE271A06B9008B7521 /* ContentView.swift in Sources */,
+				FAA276A22722BF5900FB4B93 /* YogaTimer.swift in Sources */,
 				FAD77732272208A100E73AC6 /* DetailView.swift in Sources */,
 				FAF76EFC271A06B9008B7521 /* Stretch_PawsApp.swift in Sources */,
 			);
