@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
       NavigationView {
         List(poses.poseData) { pose in
-          NavigationLink(destination: DetailView()) {
+          NavigationLink(destination: DetailView(pose: pose)) {
             Image(pose.icon)
               .resizable()
               .frame(width: 60, height: 60)
