@@ -13,6 +13,11 @@ struct DetailView: View {
     var body: some View {
       ZStack {
         Color("Secondary").ignoresSafeArea()
+          .navigationBarItems(trailing: Button("Privacy Policy"){
+            if let url = URL(string:"https://stretch-and-paws-privacy.superhi.com") {
+              UIApplication.shared.open(url)
+            }
+          })
         ScrollView(showsIndicators: false) {
           VStack(spacing: 20) {
             Image(pose.icon)
