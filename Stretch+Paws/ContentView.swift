@@ -16,12 +16,12 @@ struct ContentView: View {
   let poses = Poses()
     var body: some View {
       NavigationView {
-        List(poses.poseData) { pose in
-          NavigationLink(destination: DetailView(pose: pose)) {
-            Image(pose.icon)
+        List(poses.poseData) { Pose in
+          NavigationLink(destination: DetailView(pose: Pose)) {
+            Image(Pose.icon)
               .resizable()
               .frame(width: 60, height: 60)
-            Text(pose.name)
+            Text(Pose.name)
               .fontWeight(.medium)
               .font(.title3)
               .padding(.leading, 20)
