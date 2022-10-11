@@ -31,6 +31,10 @@ class YogaTimer: ObservableObject {
   func startTimer() {
     timerMinutes = poseMinutes
     timerSeconds = poseSeconds
+    setTimer()
+  }
+  
+  func setTimer() {
     timerActive = true
     timerPaused = false
     timerEnded = false
@@ -48,7 +52,6 @@ class YogaTimer: ObservableObject {
         self.stopTimer()
       }
     })
-    
   }
   
   // Pause the timer

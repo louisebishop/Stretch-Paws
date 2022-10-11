@@ -121,8 +121,10 @@ struct TimerOpenView: View {
       
       if yogaTimer.timerActive {
         TimerPausedButtonView(yogaTimer: yogaTimer)
-      } else {
+      } else if yogaTimer.timerPaused {
         TimerActiveButtonView(yogaTimer: yogaTimer)
+      } else {
+        TimerEndedButtonView(yogaTimer: yogaTimer)
       }
     }.padding(30)
   }
@@ -164,8 +166,24 @@ struct TimerPausedButtonView: View {
     )
   }
 }
-
+  
 struct TimerActiveButtonView: View {
+    @ObservedObject var yogaTimer: YogaTimer
+    var body: some View {
+      Button {
+        yogaTimer.setTimer()
+      } label: {
+        Text("Resume timer")
+          .padding(70)
+      }
+      .frame(width: 300, height: 50)
+      .background(Color("Secondary"))
+      .foregroundColor(Color("Primary"))
+      .cornerRadius(30)
+    }
+  }
+
+struct TimerEndedButtonView: View {
   @ObservedObject var yogaTimer: YogaTimer
   var body: some View {
     Button {
