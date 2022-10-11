@@ -48,7 +48,7 @@ struct DetailView: View {
             }
           }.padding(.horizontal, 20)
         }
-        TimerPanelView(poseDuration: pose.poseDuration, timerOpen: $timerOpen)
+        TimerPanelView(poseMinutes: pose.poseMinutes, poseSeconds: pose.poseSeconds, timerOpen: $timerOpen)
       }.onTapGesture {
         timerOpen = false
       }
@@ -64,13 +64,14 @@ struct DetailView_Previews: PreviewProvider {
         description:
           "Did someone say dog? Can't we call this a downward-facing cat instead? It's OK – this is a friendly dog, it's not interested in chasing cats. In fact, Downward-Facing Dog is the lynchpin of a yoga asana practice: if you're going to befriend with any of these poses, make sure it's this canine classic.",
         steps: ["From a kneeling position, place your hands shoulder-distance apart and spread your fingers.", "Tuck your toes and lift your hips up towards the ceiling so you create an inverted V shape.", "Balance the weight between hands and feet and think about tilting your tailbone up towards the ceiling.","Send your gaze towards your feet and breath!"],
-        topTip: "Bend your knees in order to create more length through the spine.", poseDuration: 40))
+        topTip: "Bend your knees in order to create more length through the spine.", poseMinutes: 4, poseSeconds: 20))
     }
 }
 
 struct TimerPanelView: View {
 
-  let poseDuration : Int
+  let poseMinutes : Int
+  let poseSeconds : Int
   @Binding var timerOpen: Bool
   @StateObject var yogaTimer = YogaTimer()
  
@@ -92,10 +93,11 @@ struct TimerPanelView: View {
       timerOpen.toggle()
     }
     .onAppear() {
-      yogaTimer.poseDuration = poseDuration
-      yogaTimer.timerDuration = poseDuration
+      yogaTimer.poseMinutes = poseMinutes
+      yogaTimer.poseSeconds = poseSeconds
+      yogaTimer.timerMinutes = poseMinutes
+      yogaTimer.timerSeconds = poseSeconds
     }
-  }
 }
 
 struct TimerOpenView: View {
@@ -138,8 +140,10 @@ struct TimerClosedView: View {
 struct CountdownView: View {
   @ObservedObject var yogaTimer: YogaTimer
   var body: some View {
-    Text(yogaTimer.timerDuration < 10 ? "00:0\(yogaTimer.timerDuration)" : "00:\(yogaTimer.timerDuration)")
-      .font(.system(size: 96))
+    HStack {
+      Text(yogaTimer.timerMinutes < 10 ? "0\(yogaTimer.timerMinutes):" : "\(yogaTimer.timerMinutes):")
+      Text(yogaTimer.timerSeconds < 10 ? "0\(yogaTimer.timerSeconds)" : "\(yogaTimer.timerSeconds)")
+    }.font(.system(size: 84))
   }
 }
 
@@ -175,4 +179,6 @@ struct TimerActiveButtonView: View {
     .foregroundColor(Color("Primary"))
     .cornerRadius(30)
   }
+}
+
 }

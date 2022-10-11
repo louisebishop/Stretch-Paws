@@ -13,35 +13,38 @@ import AVFoundation
 
 class YogaTimer: ObservableObject {
   
-  // Pose duration from pose
-//  var poseDuration: Int
-//  init(poseDuration: Int) {
-//          self.poseDuration = poseDuration
-//      }
-
   // Timer states
   @Published var timerActive = false
   @Published var timerPaused = false
   @Published var timerEnded = false
-  @Published var timerDuration = 30
-  var poseDuration = 30
+  var poseMinutes = 1
+  var poseSeconds = 30
   var yogaTimer = Timer()
   var audioPlayer: AVAudioPlayer?
   
   // Timer functionality
+  @Published var timerMinutes: Int = 0
+  @Published var timerSeconds: Int = 30
   
   // Start the timer
   
   func startTimer() {
-   timerDuration = poseDuration
+    timerMinutes = poseMinutes
+    timerSeconds = poseSeconds
     timerActive = true
     timerPaused = false
     timerEnded = false
     yogaTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
-      // Remove a second from the timer duration & loop over
-      self.timerDuration -= 1
-      // If the timer gets to 0, stop the timer
-      if self.timerDuration == 0 {
+
+      // When seconds gets to 1, reset seconds to 59, unless minutes is also 0
+        if self.timerSeconds == 1 && self.timerMinutes != 0 {
+          self.timerSeconds = 59
+          self.timerMinutes -= 1
+        } else {
+          self.timerSeconds -= 1
+        }
+      // When both seconds and minutes are 0, stop the timer
+      if self.timerMinutes == 0 && self.timerSeconds == 0 {
         self.stopTimer()
       }
     })
@@ -62,7 +65,8 @@ class YogaTimer: ObservableObject {
     timerEnded = true
     timerActive = false
     yogaTimer.invalidate()
-    timerDuration = poseDuration
+    timerMinutes = poseMinutes
+    timerSeconds = poseSeconds
   }
   
   // Play a sound
