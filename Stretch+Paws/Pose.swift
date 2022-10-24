@@ -29,7 +29,7 @@ class Poses {
         "Did someone say dog? Can't we call this a downward-facing cat instead? It's OK – this is a friendly dog, it's not interested in chasing cats. In fact, Downward-Facing Dog is the lynchpin of a yoga asana practice: if you're going to befriend with any of these poses, make sure it's this canine classic.",
       steps: ["From a kneeling position, place your hands shoulder-distance apart and spread your fingers.", "Tuck your toes and lift your hips up towards the ceiling so you create an inverted V shape.", "Balance the weight between hands and feet and think about tilting your tailbone up towards the ceiling.","Send your gaze towards your feet and breath!"],
       topTip: "Bend your knees in order to create more length through the spine.",
-      poseMinutes: 20,
+      poseMinutes: 1,
       poseSeconds: 10),
     Pose(
       name: "Standing Forward Fold",
@@ -38,7 +38,7 @@ class Poses {
       description: "Think of this pose as giving yourself a cuddle. As you bend and look through your legs, you may even catch sight of your tail... or a mouse.",
       steps: ["From standing, roll your spine down until your upper body is draping over your lower body.","Bend your knees in your fold to release the lower back.","Let your hands dangle or clasp opposite elbows.","Stay in stillness, or for a bit of movement, sway side to side."],
       topTip: "Try interlacing your hands behind your back for another variation!",
-      poseMinutes: 3,
+      poseMinutes: 2,
       poseSeconds: 20),
     Pose(
       name: "Tree Pose",

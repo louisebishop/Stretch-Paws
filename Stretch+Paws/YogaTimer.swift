@@ -40,8 +40,8 @@ class YogaTimer: ObservableObject {
     timerEnded = false
     yogaTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
 
-      // When seconds gets to 1, reset seconds to 59, unless minutes is also 0
-        if self.timerSeconds == 1 && self.timerMinutes != 0 {
+      // When seconds gets to 0, reset seconds to 59, unless minutes is also 0
+        if self.timerSeconds == 0 && self.timerMinutes != 0 {
           self.timerSeconds = 59
           self.timerMinutes -= 1
         } else {
