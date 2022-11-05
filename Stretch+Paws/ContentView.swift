@@ -16,22 +16,28 @@ struct ContentView: View {
   let poses = Poses()
     var body: some View {
       NavigationView {
-        List(poses.poseData) { Pose in
-          NavigationLink(destination: DetailView(pose: Pose)) {
-            Image(Pose.icon)
-              .resizable()
-              .frame(width: 60, height: 60)
-            Text(Pose.name)
-              .fontWeight(.medium)
-              .font(.title3)
-              .padding(.leading, 20)
-          }
-          .padding(5)
-          .listRowBackground(Color("Secondary"))
+        List {
+          ForEach(poses.poseGroups) { poseGroup in
+              Section(header: Text(poseGroup.groupName)) {
+                  ForEach(poseGroup.poses) { pose in
+                    NavigationLink(destination: DetailView(pose: pose)) {
+                      Image(pose.icon)
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                      Text(pose.name)
+                        .fontWeight(.medium)
+                        .font(.title3)
+                        .padding(.leading, 20)
+                }
+              }
+            }
+            .padding(5)
+            .listRowBackground(Color("Secondary"))
+         }
         }.listStyle(.grouped)
-      .navigationBarTitle("Stretch + Paws")
-      }
+        .navigationBarTitle("Stretch + Paws")
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
